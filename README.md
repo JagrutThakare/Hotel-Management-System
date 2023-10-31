@@ -1,6 +1,6 @@
 # Hotel Management System
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
 A Java Swing-based hotel management system with MySQL integration.
 
