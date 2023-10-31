@@ -11,7 +11,10 @@ A Java Swing-based hotel management system with MySQL integration.
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Documentation](#documentation)
+- [Screenshots](#screenshots)
+- [Configuration](#configuration)
+- [Database Schema](#database-schema)
+- [Reports](#reports)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -61,9 +64,20 @@ git clone https://github.com/yourusername/hotel-management-system.git
 - Use the GUI to **navigate and perform various hotel management tasks**.
 - Follow the on-screen instructions to **manage customers, bookings, rooms, and generate reports**.
 
-## Documentation
+## Screenshots
+(Include screenshots of your application's UI to provide visual references.)
 
-For more detailed information on how to use the Hotel Management System and its code structure, please refer to the **[documentation](/docs)**.
+## Configuration
+(Explain how to configure settings or customize the application, if applicable.)
+
+## Database Schema
+(Provide details about the structure of your MySQL database, including tables and relationships.)
+
+## Reports
+(Explain how to generate and interpret reports and statistics from the system.)
+
+## Contributing
+We welcome contributions to this project. To contribute, please follow the steps outlined in our [Contributing Guidelines](CONTRIBUTING.md).
 
 ## Contributing
 
