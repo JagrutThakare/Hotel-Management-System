@@ -3,12 +3,14 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class AddRooms extends JFrame implements ActionListener {
-    
+
     JLabel heading, roomno, available, lblclean, price, type;
     JButton add, cancel;
     JTextField tfroom, tfprice;
     JComboBox<String> availablecombo, cleancombo, typecombo;
-    String availableOptions[] = {"Available", "Occupied"}, cleanOptions[] = {"Clean", "Dirty"}, typeOptions[] = {"1BHK", "2BHK"};
+    String availableOptions[] = { "Available", "Occupied" }, cleanOptions[] = { "Clean", "Dirty" },
+            typeOptions[] = { "1BHK", "2BHK" };
+
     AddRooms() {
         getContentPane().setBackground(Color.white);
         setLayout(null);
@@ -85,14 +87,14 @@ public class AddRooms extends JFrame implements ActionListener {
         img.setBounds(400, 30, 500, 300);
         add(img);
 
-        
         setBounds(330, 200, 940, 470);
         setVisible(true);
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        
-        if(e.getSource() == add) {
+
+        if (e.getSource() == add) {
             String roomno = tfroom.getText();
             String availability = (String) availablecombo.getSelectedItem();
             String status = (String) cleancombo.getSelectedItem();
@@ -100,21 +102,21 @@ public class AddRooms extends JFrame implements ActionListener {
             String type = (String) typecombo.getSelectedItem();
 
             try {
-                Conn c = new Conn(); 
-                String query = "insert into room values('" + roomno + "', '" + availability + "', '" + status + "', '" + price + "', '" + type + "')";
+                Conn c = new Conn();
+                String query = "insert into room values('" + roomno + "', '" + availability + "', '" + status + "', '"
+                        + price + "', '" + type + "')";
                 c.s.executeUpdate(query);
                 JOptionPane.showMessageDialog(null, "New Room Added Successfully");
-                
 
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
 
-        }
-        else {
+        } else {
             dispose();
         }
     }
+
     public static void main(String[] args) {
         new AddRooms();
     }

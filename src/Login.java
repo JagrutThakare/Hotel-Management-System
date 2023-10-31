@@ -1,16 +1,16 @@
 
-
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.sql.*;
 
 public class Login extends JFrame implements ActionListener {
-    
+
     JTextField username;
     JButton login, cancel;
     JPasswordField password;
     HotelManagementSystem obj;
+
     Login(HotelManagementSystem obj) {
         this.obj = obj;
 
@@ -56,26 +56,28 @@ public class Login extends JFrame implements ActionListener {
         image.setBounds(350, 10, 200, 200);
         add(image);
 
-
         setBounds(500, 200, 600, 300);
         setVisible(true);
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        
-        if(e.getSource() == login) {
+
+        if (e.getSource() == login) {
             String user = username.getText();
             String pass = new String(password.getPassword());
 
             try {
                 Conn c = new Conn();
 
-                String query = "select * from login where username = '" + user + "' and password = '" + pass +"'"; // Single quotes are imp.
-            
+                String query = "select * from login where username = '" + user + "' and password = '" + pass + "'"; // Single
+                                                                                                                    // quotes
+                                                                                                                    // are
+                                                                                                                    // imp.
+
                 ResultSet rs = c.s.executeQuery(query);
 
-                if(rs.next()) { // check if data is available in database
+                if (rs.next()) { // check if data is available in database
                     dispose();
                     new Dashboard();
                 } else {
@@ -84,16 +86,18 @@ public class Login extends JFrame implements ActionListener {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-        } else if(e.getSource() == cancel) {
-            
-            if(obj == null) dispose();
+        } else if (e.getSource() == cancel) {
+
+            if (obj == null)
+                dispose();
             else {
                 obj.setVisible(true);
                 dispose();
             }
-            
+
         }
     }
+
     public static void main(String[] args) {
         new Login(null);
     }

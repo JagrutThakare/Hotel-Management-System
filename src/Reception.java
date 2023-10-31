@@ -1,11 +1,9 @@
 
-
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
 public class Reception extends JFrame {
-
 
     public static void main(String[] args) {
         new Reception();
@@ -15,10 +13,9 @@ public class Reception extends JFrame {
 
         setBounds(370, 200, 850, 570);
         setLayout(null);
-        
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/fourth.jpg"));
-        Image i3 = i1.getImage().getScaledInstance(850 , 570, Image.SCALE_SMOOTH);
+        Image i3 = i1.getImage().getScaledInstance(850, 570, Image.SCALE_SMOOTH);
         ImageIcon i2 = new ImageIcon(i3);
         JLabel l1 = new JLabel(i2);
         l1.setBounds(0, 0, 850, 570);
@@ -28,7 +25,7 @@ public class Reception extends JFrame {
         newCustomer.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new AddCustomer();
-                dispose();    
+                dispose();
             }
         });
         newCustomer.setBounds(10, 30, 200, 30);

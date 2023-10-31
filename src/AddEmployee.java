@@ -3,12 +3,13 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class AddEmployee extends JFrame implements ActionListener {
-    
+
     JButton submit;
     JLabel name, age, gender, email, job, salary, phone, image, aadhar;
     JTextField tfname, tfemail, tfage, tfgender, tfphone, tfsalary, tfaadhar;
     JRadioButton m, f;
     JComboBox<String> cbjob;
+
     AddEmployee() {
         setLayout(null);
 
@@ -55,8 +56,9 @@ public class AddEmployee extends JFrame implements ActionListener {
         job.setBounds(60, 180, 120, 30);
         job.setFont(new Font("Tahoma", Font.PLAIN, 17));
         add(job);
-        
-        String str[] = {"Front Desk Clerks", "Porters", "Housekeeping", "Kitchen Staff", "Room Service", "Chef's", "Waiter/Waitress", "Manager", "Accountant"};
+
+        String str[] = { "Front Desk Clerks", "Porters", "Housekeeping", "Kitchen Staff", "Room Service", "Chef's",
+                "Waiter/Waitress", "Manager", "Accountant" };
         cbjob = new JComboBox<>(str);
         cbjob.setBounds(200, 180, 150, 30);
         cbjob.setBackground(Color.white);
@@ -105,7 +107,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         submit.addActionListener(this);
         add(submit);
 
-        ImageIcon  i1 = new ImageIcon(ClassLoader.getSystemResource("icons/tenth.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/tenth.jpg"));
         Image i2 = i1.getImage().getScaledInstance(450, 450, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         image = new JLabel(i3);
@@ -116,7 +118,6 @@ public class AddEmployee extends JFrame implements ActionListener {
         setBounds(350, 200, 850, 540);
         setVisible(true);
     }
-    
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -128,9 +129,9 @@ public class AddEmployee extends JFrame implements ActionListener {
         String aadhar = tfaadhar.getText();
         String gender = null;
 
-        if(m.isSelected()) {
+        if (m.isSelected()) {
             gender = "Male";
-        } else if(f.isSelected()) {
+        } else if (f.isSelected()) {
             gender = "Female";
         }
 
@@ -139,8 +140,10 @@ public class AddEmployee extends JFrame implements ActionListener {
         try {
             Conn c = new Conn();
 
-            String query = "insert into employee values('" + name + "', '" + age + "', '" + gender + "', '" + job + "', '" + salary + "', '" + phone + "', '" + email + "', '" + aadhar + "')";
-            c.s.executeUpdate(query); // This method is used when we have to update the database previously we used executeQuery() which is just for reading database
+            String query = "insert into employee values('" + name + "', '" + age + "', '" + gender + "', '" + job
+                    + "', '" + salary + "', '" + phone + "', '" + email + "', '" + aadhar + "')";
+            c.s.executeUpdate(query); // This method is used when we have to update the database previously we used
+                                      // executeQuery() which is just for reading database
             JOptionPane.showMessageDialog(null, "Employee added successfully");
         } catch (Exception ec) {
             ec.printStackTrace();

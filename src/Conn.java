@@ -1,5 +1,4 @@
 
-
 import java.sql.*;
 
 /*
@@ -16,16 +15,16 @@ public class Conn {
 
     Connection c; // 2
     Statement s; // 3
-    Conn () {
-        try {
-            
-            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotelmanagementsystem", "root", "password"); // 2
-            s = c.createStatement();//3
 
-        } catch(Exception e) {
+    Conn() {
+        try {
+
+            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotelmanagementsystem", "root", "password"); // 2
+            s = c.createStatement();// 3
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
-    
-        
+
     }
 }

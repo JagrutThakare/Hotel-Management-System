@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 
-
 import java.awt.*;
 import java.sql.*;
 import javax.swing.*;
@@ -30,7 +29,7 @@ public class SearchRoom extends JFrame {
 	}
 
 	public SearchRoom() {
-	
+
 		setBounds(440, 200, 700, 500);
 		setLayout(null);
 

@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 
-
 import java.awt.*;
 import java.sql.*;
 import javax.swing.*;

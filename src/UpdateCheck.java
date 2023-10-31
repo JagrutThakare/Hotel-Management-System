@@ -1,5 +1,4 @@
 
-
 import java.awt.*;
 import java.sql.*;
 import javax.swing.*;
@@ -100,7 +99,7 @@ public class UpdateCheck extends JFrame {
                     String s1 = c1.getSelectedItem();
                     Conn c = new Conn();
                     ResultSet rs1 = c.s.executeQuery("select * from customer where number = '" + s1 + "'");
-                    while(rs1.next()) {
+                    while (rs1.next()) {
                         tfroom.setText(rs1.getString("room"));
                         tfname.setText(rs1.getString("name"));
                         tfcheck.setText(rs1.getString("checkintime"));
@@ -114,7 +113,8 @@ public class UpdateCheck extends JFrame {
                 try {
                     String total = "";
                     Conn c = new Conn();
-                    ResultSet rs2 = c.s.executeQuery("select * from room where roomnumber = '" + tfroom.getText() + "'");
+                    ResultSet rs2 = c.s
+                            .executeQuery("select * from room where roomnumber = '" + tfroom.getText() + "'");
                     while (rs2.next()) {
                         total = rs2.getString("price");
 

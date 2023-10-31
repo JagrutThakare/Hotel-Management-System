@@ -3,12 +3,13 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class AddDriver extends JFrame implements ActionListener {
-    
+
     JButton addDriver, cancel;
     JLabel name, age, gender, loc, carCompany, model, avail, image;
     JTextField tfname, tfcarCom, tfloc, tfage, tfgender, tfmodel;
     JRadioButton m, f;
     JComboBox<String> tfavail;
+
     AddDriver() {
         setLayout(null);
 
@@ -55,7 +56,7 @@ public class AddDriver extends JFrame implements ActionListener {
         carCompany.setBounds(60, 180, 120, 30);
         carCompany.setFont(new Font("Tahoma", Font.PLAIN, 17));
         add(carCompany);
-        
+
         tfcarCom = new JTextField();
         tfcarCom.setBounds(200, 180, 150, 30);
         add(tfcarCom);
@@ -74,7 +75,7 @@ public class AddDriver extends JFrame implements ActionListener {
         avail.setFont(new Font("Tahoma", Font.PLAIN, 17));
         add(avail);
 
-        String driverOptions[] = {"Available", "Busy"};
+        String driverOptions[] = { "Available", "Busy" };
         tfavail = new JComboBox<>(driverOptions);
         tfavail.setBounds(200, 280, 150, 30);
         tfavail.setBackground(Color.WHITE);
@@ -103,7 +104,7 @@ public class AddDriver extends JFrame implements ActionListener {
         cancel.addActionListener(this);
         add(cancel);
 
-        ImageIcon  i1 = new ImageIcon(ClassLoader.getSystemResource("icons/eleven.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/eleven.jpg"));
         Image i2 = i1.getImage().getScaledInstance(600, 450, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         image = new JLabel(i3);
@@ -118,7 +119,7 @@ public class AddDriver extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if(e.getSource() == cancel) {
+        if (e.getSource() == cancel) {
             dispose();
         } else {
             String name = tfname.getText();
@@ -128,9 +129,9 @@ public class AddDriver extends JFrame implements ActionListener {
             String company = tfcarCom.getText();
             String gender = null;
 
-            if(m.isSelected()) {
+            if (m.isSelected()) {
                 gender = "Male";
-            } else if(f.isSelected()) {
+            } else if (f.isSelected()) {
                 gender = "Female";
             }
 
@@ -139,15 +140,18 @@ public class AddDriver extends JFrame implements ActionListener {
             try {
                 Conn c = new Conn();
 
-                String query = "insert into driver values('" + name + "', '" + age + "', '" + gender + "', '" + company + "', '" + brand + "', '" + avail + "', '" + location + "')";
-                c.s.executeUpdate(query); // This method is used when we have to update the database previously we used executeQuery() which is just for reading database
+                String query = "insert into driver values('" + name + "', '" + age + "', '" + gender + "', '" + company
+                        + "', '" + brand + "', '" + avail + "', '" + location + "')";
+                c.s.executeUpdate(query); // This method is used when we have to update the database previously we used
+                                          // executeQuery() which is just for reading database
                 JOptionPane.showMessageDialog(null, "New Driver added successfully");
-                
+
             } catch (Exception ec) {
                 ec.printStackTrace();
             }
         }
     }
+
     public static void main(String[] args) {
         new AddDriver();
     }

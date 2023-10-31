@@ -1,5 +1,4 @@
 
-
 import java.awt.*;
 import java.sql.*;
 import javax.swing.*;
@@ -14,7 +13,7 @@ public class CheckOut extends JFrame {
 	}
 
 	public CheckOut() {
-		
+
 		setBounds(390, 200, 800, 294);
 		setLayout(null);
 
@@ -65,7 +64,7 @@ public class CheckOut extends JFrame {
 		l2.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent ae) {
-			
+
 				try {
 
 					Conn c = new Conn();
