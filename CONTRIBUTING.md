@@ -30,7 +30,7 @@ If you would like to contribute to the project, follow these steps:
 
 ## Issues
 
-You can also contribute by identifying issues, submitting bug reports, or suggesting new features. Please use our [issue tracker](link-to-issue-tracker) to report problems or propose ideas. When creating a new issue, provide as much detail as possible to help us understand the problem or your suggestion.
+You can also contribute by identifying issues, submitting bug reports, or suggesting new features. Please use our [issue tracker](https://github.com/JagrutThakare/Hotel-Management-System/issues) to report problems or propose ideas. When creating a new issue, provide as much detail as possible to help us understand the problem or your suggestion.
 
 ## Coding Standards
 
