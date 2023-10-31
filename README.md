@@ -37,6 +37,7 @@ Before you can use or contribute to this project, you need to have the following
 - Java Development Kit (JDK) - Version 8 or higher
 - MySQL Database Server
 - Git (optional, for cloning the repository)
+- VS Code
 
 ### Installation
 
@@ -46,19 +47,13 @@ Before you can use or contribute to this project, you need to have the following
 git clone https://github.com/yourusername/hotel-management-system.git
 ```
 
-# Hotel Management System
+2. **Open the project in your preferred Java IDE** (e.g., IntelliJ, Eclipse).
 
-A Java Swing-based hotel management system with MySQL integration.
+3. **Set up the MySQL database** by importing the provided SQL dump file (instructions may vary depending on your MySQL client).
 
-## Getting Started
+4. **Configure the database connection settings** in the project code to match your MySQL server.
 
-1. **Open the project in your preferred Java IDE** (e.g., IntelliJ, Eclipse).
-
-2. **Set up the MySQL database** by importing the provided SQL dump file (instructions may vary depending on your MySQL client).
-
-3. **Configure the database connection settings** in the project code to match your MySQL server.
-
-4. **Build and run the application**.
+5. **Build and run the application**.
 
 ## Usage
 
