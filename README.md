@@ -44,3 +44,45 @@ Before you can use or contribute to this project, you need to have the following
 
 ```bash
 git clone https://github.com/yourusername/hotel-management-system.git
+```
+
+# Hotel Management System
+
+A Java Swing-based hotel management system with MySQL integration.
+
+## Getting Started
+
+1. **Open the project in your preferred Java IDE** (e.g., IntelliJ, Eclipse).
+
+2. **Set up the MySQL database** by importing the provided SQL dump file (instructions may vary depending on your MySQL client).
+
+3. **Configure the database connection settings** in the project code to match your MySQL server.
+
+4. **Build and run the application**.
+
+## Usage
+
+- **Launch the application**.
+- Use the GUI to **navigate and perform various hotel management tasks**.
+- Follow the on-screen instructions to **manage customers, bookings, rooms, and generate reports**.
+
+## Documentation
+
+For more detailed information on how to use the Hotel Management System and its code structure, please refer to the **[documentation](/docs)**.
+
+## Contributing
+
+We welcome contributions to this project. To contribute, follow these steps:
+
+1. **Fork the repository**.
+2. **Create a new branch** for your feature or bug fix.
+3. Make your changes and **commit them**.
+4. **Push your changes to your fork**.
+5. **Create a pull request to the original repository**.
+
+Please read our **[Contribution Guidelines](CONTRIBUTING.md)** for more details.
+
+## License
+
+This project is licensed under the **MIT License** - see the **[LICENSE](LICENSE)** file for details.
+
