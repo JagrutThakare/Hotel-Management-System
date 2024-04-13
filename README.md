@@ -47,7 +47,7 @@ Before you can use or contribute to this project, you need to have the following
 1. Clone the repository to your local machine using Git or download it as a ZIP file.
 
 ```bash
-git clone https://github.com/yourusername/hotel-management-system.git
+git clone https://github.com/JagrutThakare/hotel-management-system.git
 ```
 
 2. **Open the project in your preferred Java IDE** (e.g., IntelliJ, Eclipse).
