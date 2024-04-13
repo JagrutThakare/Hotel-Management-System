@@ -58,6 +58,12 @@ git clone https://github.com/yourusername/hotel-management-system.git
 
 5. **Build and run the application**.
 
+## Configuration
+- Run the source command in mysql terminal
+> source queries.sql
+
+- Double Click on the Jar File
+
 ## Usage
 
 - **Launch the application**.
@@ -65,16 +71,15 @@ git clone https://github.com/yourusername/hotel-management-system.git
 - Follow the on-screen instructions to **manage customers, bookings, rooms, and generate reports**.
 
 ## Screenshots
-(Include screenshots of your application's UI to provide visual references.)
+![Alt text](images/img2.png)
+![Alt text](images/img3.png)
+![Alt text](images/img4.png)
+![Alt text](images/img5.png)
+![Alt text](images/img6.png)
 
-## Configuration
-(Explain how to configure settings or customize the application, if applicable.)
 
 ## Database Schema
-(Provide details about the structure of your MySQL database, including tables and relationships.)
-
-## Reports
-(Explain how to generate and interpret reports and statistics from the system.)
+![Alt text](images/img1.png)
 
 ## Contributing
 We welcome contributions to this project. To contribute, please follow the steps outlined in our [Contributing Guidelines](CONTRIBUTING.md).
